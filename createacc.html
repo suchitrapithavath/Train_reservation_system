@@ -1,0 +1,122 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+body
+{
+background:url(logo.jpg);
+background-size:200px 180px;
+background-repeat:no-repeat;
+padding-top:40px;
+margin:30px;
+}
+.right
+{
+border-style:solid;
+border-color:#eee;
+margin-top:50px;
+margin-left:400px;
+padding-top:50px; 
+ padding-bottom:50px; 
+padding-right:100px;
+padding-left:100px;
+position:absolute;
+width:200px;
+background-color:deepskyblue;
+}
+#d1
+{
+
+font-family:"Times New Roman";
+font-size:20px;
+color:black;
+text-align:center;
+
+
+}
+body
+{
+
+background-color:white;
+}
+#p1{
+font-family:"Times New Roman";
+font-size:20px;
+color:black;
+text-align:center;
+}
+.button {
+    color: white;
+background-color: #3333cc;
+}
+
+</style>
+<script>
+function validate()
+{
+
+	pwdelem = document.getElementById("pwd");
+	cpwdelem = document.getElementById("cpwd");
+	
+	if(pwdelem.value!=cpwdelem.value)
+	{
+		alert("please confirm password again");
+	}
+	showDialog();
+	return false;
+
+}
+function enablesubmit()
+{
+c1 = document.getElementById("c1");
+s1 = document.getElementById("s1");
+if(c1.checked==true)
+{
+s1.disabled=false;
+}
+else if(c1.checked==false)
+{
+s1.disabled=true;
+}
+}
+function svali()
+{
+	namelem = document.getElementById("nam");
+	pwdelem = document.getElementById("pwd");
+	cpwdelem = document.getElementById("cpwd");
+	
+	if(namelem.value == "" || pwdelem.value == "" || cpwdelem.value=="")
+	{
+		alert("Atleast one field is empty. Please correct the error");
+	}
+	showDialog();
+	return false;
+}
+</script>
+<title>register</title>
+</head>
+<body>
+
+<div id="d1">CREATE YOUR ACCOUNT!</div>
+<div class="right">
+<form method="POST"  action="account.jsp">
+
+
+<p><label><input type="text" id="usr" name="usr"id="nam" placeholder="USERNAME"/></label><p/>
+<p><label><input type="Password" name="Pass" id="pwd" placeholder="PASSWORD"/></label><p/>
+<p><label><input type="Password" name="password" id="cpwd" onblur="validate()" placeholder="CONFIRMPWD"/></label><p/>
+<p><label><input type="email" name="email" placeholder="EMAIL"/></label><p/>
+<p><label><input type="date" id="dob" name="dob" placeholder="DOB" /></label><p/>
+<p><label><input type="text" id="adharno" name="adharno"placeholder="ADHAR NUMBER" /></label><p/>
+
+<p><label><input type="number" id="cv" name="phone" placeholder="PHONE"/></label><p/>
+<p/>
+<label>I agree:<input type="checkbox" id="c1" onclick="enablesubmit()"/></label>
+<p/>
+
+<input type="submit" value="Register" id="s1"class="button"/>
+<input type="reset" value="reset" class="button" />
+</div>
+</form>
+</body>
+</html>

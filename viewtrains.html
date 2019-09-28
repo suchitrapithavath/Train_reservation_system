@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body
+{
+background:url(logo.jpg);
+background-size:200px 180px;
+background-repeat:no-repeat;
+padding-top:40px;
+margin:30px;
+}
+.right
+{
+border-style:solid;
+border-color:#eee;
+margin-top:50px;
+margin-left:400px;
+padding-top:50px; 
+ padding-bottom:50px; 
+padding-right:100px;
+padding-left:100px;
+position:absolute;
+width:300px;
+background-color:deepskyblue;
+}
+#d1
+{
+
+font-family:"Times New Roman";
+font-size:20px;
+color:black;
+text-align:center;
+
+
+}
+body
+{
+
+background-color:white;
+}
+#p1{
+font-family:"Times New Roman";
+font-size:20px;
+color:black;
+text-align:center;
+}
+.button {
+    color: white;
+background-color: #3333cc;
+}
+
+</style>
+
+<title>view train details</title>
+</head>
+<body>
+
+<div id="d1">CHECK THE TRAIN DETAILS!</div>
+<div class="right">
+<form method="POST" action="viewtrain1.jsp">
+<p><label> SOURCE:&nbsp;&nbsp;
+<input type="text" name="src" id="src">
+
+<br>
+<p><label> DEST  :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type="text" name="dest" id="dest" >
+<br>
+<br>
+DATE:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="curdate" >
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="submit" id="s1"class="button"/>
+
+<input type="reset" value="reset" class="button" />
+</div>
+</form>
+</body>
+</html>
+
+		

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+body
+{
+background:url(logo.jpg);
+background-size:200px 180px;
+background-repeat:no-repeat;
+padding-top:40px;
+margin:30px;
+}
+.right
+{
+border-style:solid;
+border-color:#eee;
+margin-top:20px;
+margin-left:375px;
+padding-top:50px; 
+ padding-bottom:50px; 
+padding-right:100px;
+padding-left:100px;
+position:absolute;
+width:300px;
+background-color:deepskyblue;
+}
+#d1
+{
+
+font-family:"Times New Roman";
+font-size:20px;
+color:black;
+text-align:center;
+
+
+}
+body
+{
+
+background-color:white;
+}
+#p1{
+font-family:"Times New Roman";
+font-size:20px;
+color:black;
+text-align:center;
+}
+.button {
+    color: white;
+background-color: #3333cc;
+}
+
+</style>
+<script>
+
+function enablesubmit()
+{
+c1 = document.getElementById("c1");
+s1 = document.getElementById("s1");
+if(c1.checked==true)
+{
+s1.disabled=false;
+}
+else if(c1.checked==false)
+{
+s1.disabled=true;
+}
+}
+
+</script>
+<title>reservation</title>
+</head>
+<body>
+
+<div id="d1">RESERVATION!</div>
+<div class="right">
+<form method="POST"  action="reserve.jsp" onsubmit="return svali()">
+<p>User name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username"><br/><p/>
+<p>Train name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="trainname"><br/><p/>
+<p>Train no:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="trainno"><br/></p>
+<p><label>ReserveDate:&nbsp;&nbsp;</label><input type="text" id="curdate" name="curdate" /><p/>
+<p><label>src:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="from" name="from" /><p/>
+<p><label>dest:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="to" name="to" /><p/>
+<p><label> ClassType:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="classtype" id="class">
+<option value="-1">classtype</option>
+<option value="1">First Ac</option>
+<option value="2">Second Ac</option>
+<option value="3">Sleeper class</option>
+</select>
+<p><label>No Of Seats:&nbsp;&nbsp;&nbsp;<input type="text" id="seat" name="seat" placeholder="NO OF SEATS"/></label><p/>
+<p><label>Adults:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="adult" id="adu" placeholder="ADULTS"/></label><p/>
+<p><label>Childs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="child" id="child"  placeholder="CHILDS"/></label><p/>
+
+<label>I agree:<input type="checkbox" id="c1" onclick="enablesubmit()"/></label>
+<p/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="NEXT" id="s1"class="button"disabled="true"/>
+
+</div>
+</form>
+</body>
+</html>
